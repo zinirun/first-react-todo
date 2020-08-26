@@ -1,38 +1,59 @@
-.App {
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body,
+html {
+  font-size: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+input,
+button {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: white;
+  padding: 0.4rem;
+  border: none;
+}
+
+input:hover,
+input:focus {
+  outline: none;
+  border-bottom-color: #0078ff;
+}
+
+.app-wrapper {
+  width: 500px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.remove-bt {
+  font-size: 17px;
+  background: #ff707e;
+  padding: 0.2rem;
+  color: white;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.create-bt {
+  background: #0078ff;
+  border: none;
+  border-radius: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.create-title {
+  width: 350px;
+  border: none;
+  border-bottom: 2px solid #bbb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-title {
+  display: inline-block;
+  width: 350px;
+}
+
+.todo-wrapper {
+  padding-top: 8px;
 }
