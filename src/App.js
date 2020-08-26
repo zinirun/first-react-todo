@@ -45,7 +45,6 @@ function App() {
   };
 
   const onRemove = (id) => {
-    console.dir(id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
