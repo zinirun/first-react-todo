@@ -6,7 +6,7 @@ function CreateTodo({ title, onCreate, onChange }) {
       <input
         className="create-title"
         name="title"
-        placeholder="할 일"
+        placeholder="할 일을 입력하세요!"
         value={title}
         onChange={onChange}
         autoComplete="off"

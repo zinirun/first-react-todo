@@ -4,19 +4,12 @@ import TodoList from './TodoList';
 import './App.css';
 
 function App() {
+  const appTitle = '할 일';
   const [inputs, setInputs] = useState({
     title: '',
   });
 
   const { title } = inputs;
-
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: '리액트 마스터하기',
-      isImportant: false,
-    },
-  ]);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -26,20 +19,33 @@ function App() {
     });
   };
 
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: '리액트 혼내주기',
+      isImportant: false,
+    },
+  ]);
+
   const nextId = useRef(2);
   const onCreate = () => {
-    const todo = {
-      id: nextId,
-      title,
-    };
-    setTodos([...todos, todo]);
-    setInputs({
-      title: '',
-    });
-    nextId.current += 1;
+    if (title.length < 1) {
+      return;
+    } else {
+      const newTodo = {
+        id: nextId.current,
+        title,
+      };
+      setTodos([...todos, newTodo]);
+      setInputs({
+        title: '',
+      });
+      nextId.current += 1;
+    }
   };
 
   const onRemove = (id) => {
+    console.dir(id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
@@ -51,6 +57,10 @@ function App() {
 
   return (
     <div className="app-wrapper">
+      <div className="todo-logo">
+        {appTitle}
+        <span style={{ color: 'crimson' }}>.</span>
+      </div>
       <CreateTodo title={title} onCreate={onCreate} onChange={onChange} />
       <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </div>

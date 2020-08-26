@@ -3,17 +3,23 @@ import React from 'react';
 function Todo({ todo, onRemove, onToggle }) {
   const { id, title, isImportant } = todo;
   return (
-    <div className="todo-wrapper">
+    <div
+      className="todo-wrapper"
+      style={{
+        background: isImportant ? '#FFE8EE' : '#ececff',
+      }}
+    >
       <span
         className="todo-title"
-        onClick={() => onToggle(id)}
         style={{
-          color: isImportant ? 'crimson' : 'black',
-          cursor: 'pointer',
+          color: isImportant ? 'crimson' : '#171760',
         }}
       >
         {title}
       </span>
+      <button className="important-bt" onClick={() => onToggle(id)}>
+        중요
+      </button>
       <button className="remove-bt" onClick={() => onRemove(id)}>
         삭제
       </button>

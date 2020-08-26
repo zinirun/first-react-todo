@@ -9,11 +9,14 @@ html {
 input,
 button {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: 'Noto Sans KR', sans-serif;
   background: white;
-  padding: 0.4rem;
   border: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 input:hover,
@@ -22,38 +25,85 @@ input:focus {
   border-bottom-color: #0078ff;
 }
 
+button:focus {
+  outline: none;
+}
+
+.todo-logo {
+  font-size: 45px;
+  font-weight: 600;
+}
+
 .app-wrapper {
-  width: 500px;
+  padding-top: 40px;
   margin: 0 auto;
   text-align: center;
 }
 
-.remove-bt {
-  font-size: 17px;
+.remove-bt,
+.important-bt {
+  vertical-align: top;
+  margin-top: 2px;
+  font-size: 15px;
   background: #ff707e;
-  padding: 0.2rem;
   color: white;
   border-radius: 5px;
+  padding: 0.25rem;
+}
+
+.important-bt {
+  background: #00d28c;
+  margin-right: 5px;
+}
+
+.important-bt:hover {
+  background: #3fe0ab;
+}
+
+.remove-bt:hover {
+  background: #ff8e99;
+}
+
+.create-wrapper {
+  padding: 1rem;
 }
 
 .create-bt {
   background: #0078ff;
   border: none;
   border-radius: 5px;
+  padding: 0.4rem 0.5rem;
   color: white;
+}
+
+.create-bt:hover {
+  background: dodgerblue;
 }
 
 .create-title {
   width: 350px;
+  font-size: 24px;
+  font-weight: 600;
   border: none;
+  margin-right: 5px;
   border-bottom: 2px solid #bbb;
+  padding: 0.3rem;
 }
 
 .todo-title {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
   display: inline-block;
-  width: 350px;
+  width: 333px;
+  text-align: left;
+  color: #171760;
 }
 
 .todo-wrapper {
-  padding-top: 8px;
+  margin: 10px auto;
+  width: 420px;
+  padding: 0.3rem;
+  background: #ececff;
+  border-radius: 5px;
 }
