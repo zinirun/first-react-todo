@@ -66,10 +66,6 @@ const onCreate = () => {
 
 `CreateTodo` 객체에서 `onCreate()` 함수가 호출되면 입력된 `title` 값을 `useState()`의 set 메소드로 추가해준다. `setTodo`에서 spread 방식으로 배열에 요소를 추가해줬는데, `concat()` 메소드를 써도 상관없다. 할 일이 추가되었다면 `setInputs()` 메소드로 사용자가 입력한 값을 초기화한다. 그 후 `nextId.current`를 1 증가시킨다. (뒤에 `.current`를 붙이는 이유는 일반적인 숫자 객체가 아닌 `useRef()`로 선언된 객체이기 때문이다)
 
-##### 1시간동안 잡은 오류
-
-`id`를 `nextId`로 정해주기 위해 계속 작성했으나 정상적으로 `id`가 선언되지 않고 계속 object 객체로 선언되었다. 바로 뒤에 `.current`를 붙이지 않아 생긴 오류였다. `useRef()`로 관리되는 객체는 접근시 항상 `.current`를 붙어야 한다.
-
 ### onRemove()
 
 ```jsx
@@ -94,7 +90,7 @@ const onToggle = (id) => {
 
 ### TodoList 컴포넌트 작성
 
-`TodoList` 컴포넌트로 `todos` 데이터가 들어오면 각각을 매핑하여 `Todo` 객체로 만들어 반환한다. 사실 이 부분에서 컴포넌트를 효율적으로 짜야 하는 이유를 체감했다.
+`TodoList` 컴포넌트로 `todos` 데이터가 들어오면 각각을 매핑하여 `Todo` 객체로 만들어 반환한다.
 
 ```jsx
 function TodoList({ todos, onRemove, onToggle }) {
