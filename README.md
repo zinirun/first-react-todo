@@ -1,7 +1,8 @@
 # first-react-todo
 
 Minimal Todo-List with React Components
-<img src="/images/dev-timelapse.gif width=400px>
+
+![dev-timelapse](/images/dev-timelapse.gif){: width="400"}
 
 ### Deployed by Github-Pages
 
