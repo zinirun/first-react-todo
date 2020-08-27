@@ -1,7 +1,9 @@
 # first-react-todo
 
 세상에서 제일 간단한 TodoList
+
 ![dev-timelapse](/images/dev-timelapse.gif)
+
 [개발 포스트](https://zinirun.github.io/2020/08/27/react-first-todolist/)
 
 ## 파일 구성과 로직
